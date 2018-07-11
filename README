@@ -1,0 +1,6 @@
+Before you run our project, download all necessary files (a compressed one)from google drive.
+Extract it and past them under webapp/static/models
+Then you need find an old file called filename_to_casename.pkl in our old project and past it to the same directory(webapp/static/models).
+After all, our project can be run by running run.py.
+
+All libraries we used so far are listed in testing/env.txt

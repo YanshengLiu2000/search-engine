@@ -1,0 +1,60 @@
+Week 1
+
+Joined the team and decided on the project topic
+
+Created Bitbucket and Trello account.
+
+
+Week 2
+
+Looked into how the vectorization can be implemented.
+
+Reached the different models and the various reduction techniques
+
+Added the vectorization component of the proposal based on the research
+
+
+Week3
+
+Created the scraper to extract data from HTML files
+
+Created parser to parse the data from the text files, remove punctuation and lower case everything
+
+Used Doc2Vec to trains and create a vector representation of the documents
+
+Applied PCA for dimensionality reduction
+
+Created a "query" program which accepts the query text and converts it into a vector which is then sent for similarity checking
+
+
+Week 4
+
+Researched how to improve vectorization - topic modelling and thematic summarization
+
+Created a TF-IDF model for the files
+
+Performed dimensionality reduction using LDI
+
+
+Week 5
+
+Changed the 2D PCA vector to 1D
+
+Work with team members to integrate the web portion with the algorithm portion
+
+Created a new model using topic modelling
+
+
+Week 6
+
+Removed a few junk files out of the ones provided to us as they were messing with the training.
+
+Fine tuned the training parameters. Changed it to include word2vec representations with a window size of 2
+
+Created an instance on google cloud and trained the model on the cloud.
+
+Modified the functionality of query.py so that the model doesn't load each time the user searches.
+
+implemented a mapping from file name to number in order to address the indexing issue.
+
+Created a dictionary to map file names to case names

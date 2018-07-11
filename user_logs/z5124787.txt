@@ -1,0 +1,36 @@
+Week1
+Meet all team members and select topic. i will complete the web part in this semester
+Review some flask skills and try to build a basic web
+
+Week2
+First time use blueprint, have no idea about it. Learn flask from beginning. I build a microlog website this week and start to build the project website and database.
+
+Week3
+Build the project websites. connect the website and the database. at the end of wk3, the whole website can run normally. But there is no real data. i made some fake data and use it in demo.
+
+Week4
+Demo the website to my teammates. Think functionality part. website can add more functionality part if we have enough time. i finish the pagination part, now all search reasults can shown in seperate pages. But on Tuesday, tutor said we should not use database. So i need change the db part of the website. Prepare to link the word verctor part and fast query part. 
+
+Week5
+learn boostrap and read elasticsearch(i dont think this will help the main function of our project. but it can be used as the extra functions part.)
+
+Week (mid-term break)
+build all 3 parts in our project together. Ready for our first demo.
+
+week6
+use bootstrap to let our website looks a little better. Redesign the welcome page and result page. add error condition about click search button before input something.
+
+week7
+rebuild all the website part, use some global variables to speed up the search. Abandon the Bluepoint part. There is only one member write this part. Fix a bug between fast query and vectorisation part.
+
+week8
+fix bug. help teammates.
+
+week9
+write a test script to test all files in NSWSC
+
+week10
+a few changes in website parts. 
+
+week11
+clean up the code and write doc of flask part.

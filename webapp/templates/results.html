@@ -1,0 +1,45 @@
+{% extends "common/base.html" %}
+{% include "common/header.html" %}
+{% block content %}
+<style>
+    .table-hover{
+        border: 0.5px solid white;
+        background-color: whitesmoke;
+        background-opacity: 0.5;
+        color: black;
+    }
+</style>
+    <font color="#000000"><b>Our website find all results in {{ search_time }} seconds.</b></font>
+    <div class="container">
+        <table class="table table-hover" style = "text-align:center;">
+            <thead>
+                <tr>
+                    <th style = "text-align:center;">Rank</th>
+                    <th style = "text-align:center;">Article Name</th>
+                    <th style = "text-align:center;">Similarity</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            {% if search_error == 1 %}
+            <tr>
+                <td><b>There is no result. Please give me more information!</b></td>
+            </tr>
+            {% endif %}
+            {% if search_error == 2 %}
+            <tr>
+                <td><b>You upload nothing, please select a file first then click the button.</b></td>
+            </tr>
+            {% endif %}
+            {% for article in search_results %}
+            <tr>
+                <td>{{ article['rank'] }}    </td>
+                <td><a href="{{ url_for('article_details', file_name=article['file_name']) }}">{{ article['article_title'] }}</a></td>
+                <td>{{ article['similarity'] }}%</td>
+            </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

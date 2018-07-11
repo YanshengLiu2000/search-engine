@@ -1,0 +1,10 @@
+Data
+data_vectors
+*.sublime-project
+*.sublime-workspace
+*.pyc
+*.npy
+*.model
+*.pkl
+/webapp/static/upload
+/webapp/static/models

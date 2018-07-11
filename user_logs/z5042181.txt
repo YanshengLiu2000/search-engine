@@ -1,0 +1,58 @@
+Week 1
+Formed Aquarius Group
+Team selected Project 1
+Went through the Flask tutorial and built a MVP
+Wrote the Project Proposal Report Introduction Section
+
+Week 2
+Researched Local Sensitivity Hashing (LSH)
+Researched succint summarization
+Completed Fast Query section of Project Proposal Report
+
+Week 3
+Researched LSH libraries
+Candidates:
+    1. LSH Falconn library
+    2. sklearn
+
+Week 4
+Implemented LSH Falconn library
+Implemented euclidean distance measure
+
+Week 5
+Integration:
+    1. Worked with Daniel to get integration between doc2vec and LSH algorithm functioning
+    2. Worked with Sheng to get LSH algorithm working with webapp
+
+Week 6
+Integration issues between doc2vec and LSH.  Removed some non essential normalization features from LSH.
+
+Week 7
+Continue to have integration issues between doc2vec and LSH.
+Produced test files to compare query vector to matrix vectors.
+
+Week 8
+Working with Daniel to get deterministic vectors out of doc2vec.
+Continue to compare query vectors to matrix vectors.
+
+Week 9
+Finished work with deterministic vectors for doc2vec.
+Testing search engine for correctness.
+
+
+Week 10
+Fine tuning LSH parameters.  Produced correct results.
+
+Tested all 30k files.  Results:
+
+Rank   No.
+0    29571
+1      102
+2        9
+3        1
+
+Teamed deemed that this results were satisfactory.
+
+Week 11
+Clean up and doc code.
+Produced documented code as sample for rest of team.

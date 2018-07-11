@@ -1,0 +1,16 @@
+ <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css/style.css') }}">
+{% extends "common/base.html" %}
+{% include "common/header.html" %}
+{% block content %}
+
+<style>
+.form-control{
+    width: 30%;
+}
+</style>
+
+    <form class="form-horizontal" action={{url_for('upload')}} method="POST" enctype=multipart/form-data>
+      <p><input type=file name=file class="form-control">
+         <input type=submit class="btn btn-default" value="Upload and Search">
+    </form>
+{% endblock %}

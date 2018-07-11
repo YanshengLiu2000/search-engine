@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module lsh</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>lsh</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/itayfeldman/Documents/education/unsw/18s1/comp9900/slc-search-engine/webapp/fast_query/lsh.py">/home/itayfeldman/Documents/education/unsw/18s1/comp9900/slc-search-engine/webapp/fast_query/lsh.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="scipy.spatial.distance.html">scipy.spatial.distance</a><br>
+</td><td width="25%" valign=top><a href="falconn.html">falconn</a><br>
+</td><td width="25%" valign=top><a href="numpy.html">numpy</a><br>
+</td><td width="25%" valign=top><a href="timeit.html">timeit</a><br>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="lsh.html#LSH">LSH</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="LSH">class <strong>LSH</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>Local-Sensitivity&nbsp;Hashing&nbsp;(<a href="#LSH">LSH</a>)&nbsp;is&nbsp;a&nbsp;class&nbsp;of&nbsp;methods&nbsp;for&nbsp;the&nbsp;nearest&nbsp;neighbor&nbsp;search&nbsp;problem.<br>
+&nbsp;<br>
+https://github.com/FALCONN-LIB/FALCONN<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="LSH-LSHtable"><strong>LSHtable</strong></a>(self, file, euclidean=True, number_of_tables=50, hash_fx=18)</dt><dd><tt>input:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2-D&nbsp;numpy&nbsp;array<br>
+output:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#LSH">LSH</a>&nbsp;table<br>
+&nbsp;<br>
+Params:<br>
+:file:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2-D&nbsp;numpy&nbsp;array&nbsp;of&nbsp;document&nbsp;vectors<br>
+:distance_function:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[EuclideanSquared,&nbsp;NegativeInnerProduct]<br>
+:number_of_tables:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(default=50)<br>
+:num_of_rotations:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1<br>
+:seed:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5721840<br>
+:num_setup_threads:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<br>
+:hash_fx:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18&nbsp;(2^18&nbsp;hash&nbsp;tables)</tt></dd></dl>
+
+<dl><dt><a name="LSH-query"><strong>query</strong></a>(self, query, LSHtable, k=100, number_of_probes=54000)</dt><dd><tt>input:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1-D&nbsp;document&nbsp;vector<br>
+output:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array&nbsp;of&nbsp;element&nbsp;results<br>
+&nbsp;<br>
+Params:<br>
+:query:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1-D&nbsp;document&nbsp;vector<br>
+:LSHtable:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#LSH">LSH</a>&nbsp;table<br>
+:k:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;number&nbsp;of&nbsp;nearest&nbsp;neighbors&nbsp;(default=100)<br>
+:number_of_probes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;54000&nbsp;(fine&nbsp;tuned&nbsp;parameter)</tt></dd></dl>
+
+<dl><dt><a name="LSH-transform"><strong>transform</strong></a>(self, dataset)</dt><dd><tt>Normalizing&nbsp;and&nbsp;centering&nbsp;the&nbsp;data&nbsp;has&nbsp;no&nbsp;effect&nbsp;in&nbsp;correctness,&nbsp;but&nbsp;signifcantly&nbsp;speeds&nbsp;the&nbsp;<a href="#LSH">LSH</a>&nbsp;algorithm.<br>
+&nbsp;<br>
+input:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dataset<br>
+output:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;transformed&nbsp;dataset</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table>
+</body></html>

@@ -1,0 +1,43 @@
+First, pull the updated files from git.
+Second, use all the new model files (In itay's part i think)
+
+previously, in the query.py, i used to load the model for each query. But that's a waste of time.
+So, i need you to load the model as soon as the webapp starts, and pass the model to the query function.
+
+
+import os
+from gensim import models
+file = os.path.join(os.getcwd(),"doc2vec","doc2vec.model")
+model = models.Doc2Vec.load(file)
+
+Then, each time you get a query, call: process_query(query,model)
+
+----------------------------------------------------------------------------------------------------------
+
+The reverse dictionary.pkl will help in getting the indexing right.
+
+import pickle
+import os
+file_path = os.path.join(os.getcwd(),"doc2vec","reverse_dictionary.pkl")
+file = open(file_path,"rb")
+reverse_dictionary = pickle.load(file)
+
+Usage:
+#reverse_dictionary[0]
+#Out[70]: 
+#'NSWSC_2013_1775.txt'
+
+----------------------------------------------------------------------------------------------------------
+
+In the website, instead of displaying the name of the file, i think it would be better of we displayed the name of the case.
+
+import pickle
+import os
+file_path = os.path.join(os.getcwd(),"filename_to_casename.pkl")
+file = open(file_path,"rb")
+file_to_case = pickle.load(file)
+
+Usage:
+#file_to_case[reverse_dictionary[0].replace("txt","html")]
+#Out[61]
+#'El-Saeidy v NSW Land & Housing Corporation (No 6) [2013] NSWSC 1775 (25 November 2013)'

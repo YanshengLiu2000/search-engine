@@ -1,0 +1,100 @@
+Week 1
+
+Form the team and select topic one as project. Separate teams and become the Scrum Master of the group. 
+
+Research about solution for vectorisation.
+
+Create Bitbucket team and also Trello team.
+
+Week 2
+
+Created the group Google Drive.
+
+Researched about Bag of Words and Tf-idf. 
+
+Wrote the group weekly dairy.
+
+Researched how to manage a project and proposed a suggestion 
+
+Wrote Proposal Assignment 
+
+Week3
+
+Teach group member how to use git
+
+Wrote group weekly dairy
+
+Wrote Proposal Assignment
+
+Formatting the proposal and handed in 
+
+Week 4:
+
+Wrote group weekly dairy
+
+Working on using name entity extraction to gather more info from dataset
+
+held a group meeting on Friday to let everyone have a general idea about the project.
+
+Week 5:
+
+Wrote group weekly dairy
+
+Be able to extract case title, names, dates, locations from doc.
+
+Be able to get Plaintiff, Defendant, Date from the Doc
+
+Working on get other details 
+
+Working on get topic terms
+
+Week 6:
+
+Wrote group weekly dairy
+
+Update Trello
+
+Update term search
+
+Week 7:
+
+Wrote group weekly dairy
+
+Update Trello
+
+Research on set up Google Cloud VM
+
+Merge front end to current branch
+
+Week 8:
+
+Wrote group weekly dairy
+
+Update Trello
+
+Set up Google Cloud VM and environment
+
+Pull the code into the VM and get it up and running
+
+Get a domain for the website and update the DNS to point to the website
+
+Week 9:
+
+Wrote group weekly dairy
+
+Update Front End
+
+Maintain Google Cloud VM
+
+Update front End
+
+Testing website functionality
+
+
+Week 10:
+
+Wrote group weekly dairy
+
+Maintain Google Cloud VM
+
+Generate requirement.txt for submission
